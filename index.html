@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+
+    <h1>Cloud Firestore</h1>
+
+    <script>
+        var config = {
+
+            apiKey: "AIzaSyAiKEnnLZ74lpu-E7ihuYdmvgBnBQiJITA",
+            authDomain: "chunbot55.firebaseapp.com",
+            databaseURL: "https://chunbot55.firebaseio.com",
+            projectId: "chunbot55",
+            storageBucket: "chunbot55.appspot.com",
+            messagingSenderId: "1054612954747",
+            appId: "1:1054612954747:web:7d75a386fa639e11"
+        };
+        firebase.initializeApp(config);
+
+        const firestore = firebase.firestore();
+
+        firestore.collection("store").doc("Hatsune Miku").set({
+            item: "Nendoroid",
+            id: 33,
+            available: true
+        });
+
+        firestore.collection("store").doc("Flandre Scarlet").set({
+            item: "Nendoroid",
+            id: 136,
+            available: true
+        });
+
+        firestore.collection("store").doc("Yae Sakura").set({
+            item: "Nendoroid",
+            id: 908,
+            available: false
+        });
+    </script>
+
+</body>
+
+</html>
