@@ -10,8 +10,7 @@
     <h1>Cloud Firestore</h1>
 
     <script>
-        var config = {
-
+        var config = { 
             apiKey: "AIzaSyAiKEnnLZ74lpu-E7ihuYdmvgBnBQiJITA",
             authDomain: "chunbot55.firebaseapp.com",
             databaseURL: "https://chunbot55.firebaseio.com",
@@ -23,24 +22,40 @@
         firebase.initializeApp(config);
 
         const firestore = firebase.firestore();
-
+        
+        // create
         firestore.collection("store").doc("Hatsune Miku").set({
             item: "Nendoroid",
             id: 33,
             available: true
         });
+        // firestore.collection("store").doc("Flandre Scarlet").set({
+        //     item: "Nendoroid",
+        //     id: 136,
+        //     available: true
+        // });
+        // firestore.collection("store").doc("Yae Sakura").set({
+        //     item: "Nendoroid",
+        //     id: 908,
+        //     available: false
+        // });
+        
+        // update
+        // firestore.collection("store").doc("Yae Sakura").update({
+        //             available: true
+        // });
+        // firestore.collection("store").doc("Hatsune Miku").update({
+        //     available: false
+        // });
+        // firestore.collection("store").doc("Flandre Scarlet").update({
+        //     available: false
+        // });
 
-        firestore.collection("store").doc("Flandre Scarlet").set({
-            item: "Nendoroid",
-            id: 136,
-            available: true
-        });
-
-        firestore.collection("store").doc("Yae Sakura").set({
-            item: "Nendoroid",
-            id: 908,
-            available: false
-        });
+        // delete
+        // firestore.collection("store").doc("Yae Sakura").delete();
+        // firestore.collection("store").doc("Hatsune Miku").delete();
+        // firestore.collection("store").doc("Flandre Scarlet").delete();
+        
     </script>
 
 </body>
